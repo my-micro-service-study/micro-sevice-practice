@@ -1,0 +1,22 @@
+###服务启动端口号
+server:
+  port: 8200
+###服务名称(服务注册到eureka名称)
+spring:
+  application:
+    name: verify-login-service
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+
+####swagger相关配置
+swagger:
+  base-package: com.tmh.verify.service
+  title: SpringCloud2.x构建微服务-登录验证服务接口
+  description: 该项目“基于SpringCloud2.x构建微服务
+  version: 1.1
+  contact:
+    name: 红砖
+    email: 943049986@qq.com
