@@ -11,6 +11,8 @@
     <module>spring-cloud-eureka</module>
     <module>spring-cloud-member-service</module>
     <module>spring-cloud-verify-login-service</module>
+    <module>spring-cloud-apollo-quick-start</module>
+    <module>spring-cloud-gateway</module>
   </modules>
   <packaging>pom</packaging>
   <parent>
