@@ -21,6 +21,6 @@ public class VerifyLoginService {
     if (phone.equals("123456") && password.equals("123456")) {
       return "succeed";
     }
-    return "failed";
+    throw new RuntimeException("登录失败");
   }
 }

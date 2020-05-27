@@ -5,6 +5,8 @@ server:
 spring:
   application:
     name: member-service
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
 ###服务注册到eureka地址
 eureka:
   client:
