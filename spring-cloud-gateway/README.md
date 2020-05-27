@@ -15,12 +15,12 @@ zuul.routes.api-b.serviceId=verify-login-service
 gateway.zuul.swaggerDocument=[
     {
         "name": "member-service",
-        "location": "/member-service/v2/api-docs",
+        "location": "/member-service/v2/api-docs?accessToken=123456",
         "version": "2.0"
     },
     {
         "name": "verify-login-service",
-        "location": "/verify-login-service/v2/api-docs",
+        "location": "/verify-login-service/v2/api-docs?accessToken=123456",
         "version": "2.0"
     }
 ]
