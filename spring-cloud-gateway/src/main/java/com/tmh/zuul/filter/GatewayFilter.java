@@ -3,6 +3,7 @@ package com.tmh.zuul.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.tmh.zuul.builder.GatewayDirector;
+import com.tmh.zuul.responsibilityChain.FactoryHandler;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -33,7 +34,8 @@ public class GatewayFilter extends ZuulFilter {
     // 2.获取客户端真实ip地址
     String ipAddress = getIpAddr(request);
     HttpServletResponse response = ctx.getResponse();
-    gatewayDirector.direct(ctx, ipAddress, response, request);
+//    gatewayDirector.direct(ctx, ipAddress, response, request);
+    FactoryHandler.getHandler().handle(ctx, ipAddress, request, response);
     // 3. 过滤请求参数、防止XSS攻击
     Map<String, List<String>> filterParameters = filterParameters(request, ctx);
     ctx.setRequestQueryParams(filterParameters);
